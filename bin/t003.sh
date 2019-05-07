@@ -1,3 +1,2 @@
-#made some other changes
-echo "Here's another me."
-echo "another line please!!"
+#here's the final merge result
+echo "Hi, it's the new me!!"
