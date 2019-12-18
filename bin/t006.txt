@@ -1,0 +1,60 @@
+##測試備份tar shell
+#!/bin/bash
+#目標：
+#確認tar 語法
+# tar cvf  產生tar檔
+#經測試會保留link
+tar cvf exclude=
+'', "" 都可加
+tar cvf -X exclude.dat, --exclude-from="exclude.dat"
+
+/*
+本文件作為備份測試的分析檔
+再利用本文件作為shell script的虛擬碼
+設計概念、想法、程式碼及測試結果都會放這裡：
+概念：
+備份shell script
+語法概要
+tar cvf [備份檔案位置] -X [忽略目錄清單] /
+先測一個目錄：
+sudo tar cvpf /media/test/f540526c-212c-49d4-88d7-9af72f03e27c/backup.tar -X exclude.dat /bin
+成功！！
+-p, --preserve-permissions, --same-permissions
+              extract  information  about  file permissions (default
+              for superuser)
+exclude dir
+/cdrom
+/proc
+/tmp
+/mnt
+/dev
+/sys
+/run 
+/media 
+/var/log
+/var/cache/apt/archives
+/usr/src/linux-headers* 
+/home/*/.gvfs
+/home/*/.cache 
+/home/*/.local/share/Trash 
+11:29備份成功
+現在安裝新程式：
+Stellarium, Inkscape
+11:31
+測試回復
+sudo tar xvpf /media/test/f540526c-212c-49d4-88d7-9af72f03e27c/backup.tar --numeric-owner
+奇怪的是新程式依然存在。
+考慮把舊程式移除
+錯誤：沒移動目錄位置
+重新還原一次
+15:24
+目前測試結果：
+無法開機，參考網路文章重新install grub似乎有誤
+決定再還原一次
+15:39 
+還是不行，決定放棄，重新安裝再測。
+
+*/
+
+本文決定放到Google doc
+

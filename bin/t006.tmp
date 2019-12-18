@@ -1,0 +1,15 @@
+
+/cdrom
+/dev
+/home/*/.cache
+/home/*/.gvfs
+/home/*/.local/share/Trash
+/media
+/mnt
+/proc
+/run
+/sys
+/tmp
+/usr/src/linux-headers*
+/var/cache/apt/archives
+/var/log
